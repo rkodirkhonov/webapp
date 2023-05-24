@@ -18,7 +18,6 @@ const WelcomePage = () => {
       // Clear input values
       setName("");
       setPassword("");
-      setIsSignUpSuccess(true);
       // const bt = document.querySelector('.btn2');
       // bt.style.visibility = 'visible';
     } else {
@@ -29,10 +28,12 @@ const WelcomePage = () => {
 
   const handleSignIn = () => {
     // Redirect to the sign-in page
-    if (setIsSignUpSuccess) {
-      return <Navigate to="/signin" replace />;
+    if (isSignUpSuccess) {
+      <Navigate to="/signin" replace />;
+      
     }
   };
+  
 
   return (
     <>
@@ -60,7 +61,7 @@ const WelcomePage = () => {
         {isSignUpSuccess && (
           <p>Sign up successful! Please proceed to sign in.</p>
         )}
-        <button className="btn2" onClick={handleSignIn}>Sign In</button>
+        <button onClick={handleSignIn}>Sign In</button>
       </div>
     </>
   );
