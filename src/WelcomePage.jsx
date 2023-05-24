@@ -22,7 +22,7 @@ const WelcomePage = () => {
       // const bt = document.querySelector('.btn2');
       // bt.style.visibility = 'visible';
     } else {
-      window.alert("Fill in the blanks above first.");
+      window.alert("Just fill in the input fields with just random words.");
     }
     // Set sign-up success to true
   };
@@ -58,8 +58,8 @@ const WelcomePage = () => {
         <button onClick={handleSignUp}>Sign Up</button>
         {isSignUpSuccess && (
           <p>Sign up successful! Please proceed to sign in.</p>
-        )}
-        <button onClick={handleSignIn}>Sign In</button>
+          )}
+          <button onClick={handleSignIn}>Sign In</button>
       </div>
     </>
   );

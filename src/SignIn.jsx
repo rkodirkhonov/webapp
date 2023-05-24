@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import mainImage from './welco.png';
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -22,7 +23,8 @@ const SignIn = () => {
   };
 
   return (
-    <div>
+    <div style={{textAlign: "center", maxWidth: "40%", margin: "auto"}}>
+      <img src={mainImage} alt="Sign in Page" />
       <h2>Sign In</h2>
       <input
         type="text"
