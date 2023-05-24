@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [isError, setIsError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSignIn = () => {
     // Retrieve the user data from local storage
@@ -13,10 +14,8 @@ const SignIn = () => {
     if (userData && userData.name === name && userData.password === password) {
       // Successful sign-in, perform any necessary action (e.g., redirect, set authentication state)
       setIsError(false);
-      if(!isError){
-        return <Navigate to="/home" replace />;
-      }
       // Redirect to the authenticated page or perform any other necessary action
+      navigate("/home");
     } else {
       setIsError(true);
     }

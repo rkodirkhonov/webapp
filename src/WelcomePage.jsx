@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./WelcomePage.css";
-import im from './welco.png';
+import mainImage from './welco.png';
 
 const WelcomePage = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [isSignUpSuccess, setIsSignUpSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleSignUp = () => {
     // Save the user data to local storage
@@ -18,7 +19,6 @@ const WelcomePage = () => {
       // Clear input values
       setName("");
       setPassword("");
-      setIsSignUpSuccess(true);
       // const bt = document.querySelector('.btn2');
       // bt.style.visibility = 'visible';
     } else {
@@ -29,19 +29,18 @@ const WelcomePage = () => {
 
   const handleSignIn = () => {
     // Redirect to the sign-in page
-    if (setIsSignUpSuccess) {
-      return <Navigate to="/signin" replace />;
-    }
+    navigate("/signin");
   };
+  
 
   return (
     <>
       <div className="welcome-page">
-        <img src={im} alt="Welcome" />
-        <h1>Welcome to Our Web Application</h1>
+        <h1>Web Application</h1>
         <p>Explore the world of programming and technology</p>
+        <img src={mainImage} alt="Welcome" />
       </div>
-      <div>
+      <div className="signUP">
         <h2>Sign Up</h2>
         <input
           type="text"
@@ -60,7 +59,7 @@ const WelcomePage = () => {
         {isSignUpSuccess && (
           <p>Sign up successful! Please proceed to sign in.</p>
         )}
-        <button className="btn2" onClick={handleSignIn}>Sign In</button>
+        <button onClick={handleSignIn}>Sign In</button>
       </div>
     </>
   );
