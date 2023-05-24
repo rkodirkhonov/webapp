@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./WelcomePage.css";
 import im from './welco.png';
 
@@ -7,6 +7,7 @@ const WelcomePage = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [isSignUpSuccess, setIsSignUpSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleSignUp = () => {
     // Save the user data to local storage
@@ -28,10 +29,7 @@ const WelcomePage = () => {
 
   const handleSignIn = () => {
     // Redirect to the sign-in page
-    if (isSignUpSuccess) {
-      <Navigate to="/signin" replace />;
-      
-    }
+    navigate("/signin");
   };
   
 
