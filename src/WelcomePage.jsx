@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./WelcomePage.css";
-import im from './welco.png';
+import mainImage from './welco.png';
 
 const WelcomePage = () => {
   const [name, setName] = useState("");
@@ -36,11 +36,11 @@ const WelcomePage = () => {
   return (
     <>
       <div className="welcome-page">
-        <img src={im} alt="Welcome" />
-        <h1>Welcome to Our Web Application</h1>
+        <h1>Web Application</h1>
         <p>Explore the world of programming and technology</p>
+        <img src={mainImage} alt="Welcome" />
       </div>
-      <div>
+      <div className="signUP">
         <h2>Sign Up</h2>
         <input
           type="text"

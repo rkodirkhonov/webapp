@@ -1,6 +1,7 @@
 import React,  { useState, useEffect }from "react";
 import axios from "axios";
 import MovieCard from "./MovieCard";
+import Navbar from "./Navbar"
 
 
 const Home = () => {
@@ -32,6 +33,8 @@ const Home = () => {
 
  return (
         <>
+        <Navbar />
+    
         <div className="main-div">
             <input 
                 type="text"

@@ -1,8 +1,11 @@
 import React from "react";
 import "./About.css";
+import Navbar from "./Navbar";
 
 const About = () => {
   return (
+    <>
+    <Navbar />
     <div className="about-container">
       <h1>About</h1>
       <p>
@@ -36,6 +39,7 @@ const About = () => {
         Enjoy exploring and experimenting with the functionality!
       </p>
     </div>
+    </>
   );
 }
 
