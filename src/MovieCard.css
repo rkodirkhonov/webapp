@@ -3,10 +3,12 @@
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 10px;
+    height: 720px;
+    max-width: min-content;
   }
   
   .card img {
-    width: 100%;
+    width: auto;
     height: auto;
     border-radius: 8px;
   }
@@ -20,8 +22,15 @@
   }
   
   .movie-card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     gap: 20px;
+    width: 100%;
+    /* text-align: left; */
+    margin: auto;
+    align-content: center;
+    align-items: center;
+    /* position: relative; */
+    justify-content: center
   }
   

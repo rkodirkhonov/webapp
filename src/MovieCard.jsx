@@ -4,7 +4,7 @@ function MovieCard(props) {
   const { title, year, synopsis, runtime, genre, studio, rating } = props.movie;
   return (
     <div className="card">
-      <img src={props.movie.imageUrl} alt={title} />
+      <img style={{maxWidth: "270px",}} src={props.movie.imageUrl} alt={title} />
       <h3>{title}</h3>
       <p>Year: {year}</p>
       <p>Synopsis: {synopsis}</p>

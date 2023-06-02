@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+// import axios from "axios";
 import MovieCard from "./MovieCard";
 import Navbar from "./Navbar";
+import moviesData from "./moviesData";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -8,35 +10,41 @@ const Home = () => {
   const [filteredMovies, setFilteredMovies] = useState([]);
 
   useEffect(() => {
+    // Fetch movie data from the backend API
+    // axios
+    //   .get("/api/movies")
+    //   .then((response) => {
+    //     setMovies(response.data);
+    //     setFilteredMovies(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching movie data:", error);
+    //   });
     fetchData();
-    handleSearch(""); // Perform initial search without a specific term
+    setMovies(moviesData);
+    setFilteredMovies(moviesData);   
   }, []);
 
-  const handleSearch = (searchTerm) => {
+  const handleSearch = (event) => {
+    const searchTerm = event.target.value;
     setSearchTerm(searchTerm);
-  
-    const filteredMovies = movies.filter((movie) => {
-      const lowerCaseSearchTerm = searchTerm.toLowerCase();
-      return (
-        lowerCaseSearchTerm === "" ||
-        movie.title.toLowerCase().includes(lowerCaseSearchTerm) ||
-        movie.synopsis.toLowerCase().includes(lowerCaseSearchTerm) ||
-        movie.genre.toLowerCase().includes(lowerCaseSearchTerm)
-      );
-    });
+
+    const filteredMovies = movies.filter((movie) =>
+      movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      movie.synopsis.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      movie.genre.toLowerCase().includes(searchTerm.toLowerCase())
+    );
     setFilteredMovies(filteredMovies);
   };
-  
-
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3001/data");
+      const response = await fetch("http://localhost:3001");
       const jsonData = await response.json();
       setMovies(jsonData);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  };
+  }
 
   return (
     <>
@@ -47,7 +55,7 @@ const Home = () => {
           type="text"
           placeholder="Search"
           value={searchTerm}
-          onChange={(event) => handleSearch(event.target.value)}
+          onChange={handleSearch}
         />
         <div className="movie-card-container">
           {filteredMovies.map((movie) => (
