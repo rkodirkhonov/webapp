@@ -44,15 +44,23 @@ const Home = () => {
 
       <div className="main-div">
         <input
+        style={{paddingTop: "4rem",}}
           type="text"
           placeholder="Search"
           value={searchTerm}
           onChange={(event) => handleSearch(event.target.value)}
         />
         <div className="movie-card-container">
-          {filteredMovies.map((movie) => (
+          {
+          filteredMovies !== "" ?
+          filteredMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
-          ))}
+          ))
+          :
+          movies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))
+          }
         </div>
       </div>
     </>
