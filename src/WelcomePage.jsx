@@ -1,37 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./WelcomePage.css";
 import mainImage from './welco.png';
 
 const WelcomePage = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  const [name, setName] = useState({
+    value: "",
+    isValid: true
+  });
+  const [password, setPassword] = useState({
+    value: "",
+    isValid: true
+  });
   const [isSignUpSuccess, setIsSignUpSuccess] = useState(false);
   const navigate = useNavigate();
 
+  const handleNameChange = (e) => {
+    setName({
+      value: e.target.value,
+      isValid: e.target.value !== ""
+    });
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword({
+      value: e.target.value,
+      isValid: e.target.value !== ""
+    });
+  };
+
   const handleSignUp = () => {
-    // Save the user data to local storage
-    if (name && password) {
-      // Save the user data to local storage
-      localStorage.setItem("userData", JSON.stringify({ name, password }));
-      // Set sign-up success to true
+    if (name.value && password.value) {
+      localStorage.setItem("userData", JSON.stringify({ name: name.value, password: password.value }));
       setIsSignUpSuccess(true);
-      // Clear input values
-      setName("");
-      setPassword("");
-      // const bt = document.querySelector('.btn2');
-      // bt.style.visibility = 'visible';
+      setName({ value: "", isValid: true });
+      setPassword({ value: "", isValid: true });
     } else {
-      window.alert("Just fill in the input fields with just random words.");
+      setName({ ...name, isValid: name.value !== "" });
+      setPassword({ ...password, isValid: password.value !== "" });
     }
-    // Set sign-up success to true
   };
 
   const handleSignIn = () => {
-    // Redirect to the sign-in page
     navigate("/signin");
   };
-  
 
   return (
     <>
@@ -45,21 +57,24 @@ const WelcomePage = () => {
         <input
           type="text"
           placeholder="Name"
-          value={name}
-          onChange={
-            (e) => setName(e.target.value)}
+          value={name.value}
+          onChange={handleNameChange}
+          className={name.isValid ? "" : "invalid-input"}
+          required
         />
         <input
           type="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={password.value}
+          onChange={handlePasswordChange}
+          className={password.isValid ? "" : "invalid-input"}
+          required
         />
         <button onClick={handleSignUp}>Sign Up</button>
         {isSignUpSuccess && (
           <p>Sign up successful! Please proceed to sign in.</p>
-          )}
-          <button onClick={handleSignIn}>Sign In</button>
+        )}
+        <button onClick={handleSignIn}>Sign In</button>
       </div>
     </>
   );
