@@ -1,49 +1,323 @@
 {
-    "data": [
-      {
-        "id": 1,
-        "title": "The Avengers",
-        "year": 2012,
-        "synopsis": "Earth's mightiest heroes must come together and learn to fight as a team to save the world from Loki and his army.",
-        "runtime": "143 min",
-        "genre": "Action, Adventure, Sci-Fi",
-        "studio": "Marvel Studios",
-        "rating": 8.0,
-        "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTp0qlAoWcOOswIkL_qpjYzJqCCDmWXiBzCXiqbE43Obo8c0Z-s"
-      },
-      {
-        "id": 2,
-        "title": "The Shawshank Redemption",
-        "year": 1994,
-        "synopsis": "Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.",
-        "runtime": "142 min",
-        "genre": "Drama",
-        "studio": "Castle Rock Entertainment",
-        "rating": 9.3,
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjzGdfg4HcAI-yCi9gXofi7JLT8T8vgcufIfTyTxqL4_3UUiNJ"
-      },
-      {
-        "id": 3,
-        "title": "Inception",
-        "year": 2010,
-        "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-        "runtime": "148 min",
-        "genre": "Action, Adventure, Sci-Fi",
-        "studio": "Warner Bros.",
-        "rating": 8.8,
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMnFzleYH2PxfTzz084F3cHelZC9FeJ9Ir4vrlrKjZANPCiMJ"
-      },
-      {
-        "id": 4,
-        "title": "The Dark Knight",
-        "year": 2008,
-        "synopsis": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
-        "runtime": "152 min",
-        "genre": "Action, Crime, Drama",
-        "studio": "Warner Bros.",
-        "rating": 9.0,
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOH1Z3WEv-NS_ahc7NSQRz1LTh813Z6sMmI_E7d1_FYpQd0MxY"
-      }
-    ]
-  }
-  
+  "data": [
+    {
+      "id": 1,
+      "title": "The Avengers",
+      "year": 2012,
+      "synopsis": "Earth's mightiest heroes must come together and learn to fight as a team to save the world from Loki and his army.",
+      "runtime": "143 min",
+      "genre": "Action, Adventure, Sci-Fi",
+      "studio": "Marvel Studios",
+      "rating": 8.0,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTp0qlAoWcOOswIkL_qpjYzJqCCDmWXiBzCXiqbE43Obo8c0Z-s"
+    },
+    {
+      "id": 2,
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "synopsis": "Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.",
+      "runtime": "142 min",
+      "genre": "Drama",
+      "studio": "Castle Rock Entertainment",
+      "rating": 9.3,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjzGdfg4HcAI-yCi9gXofi7JLT8T8vgcufIfTyTxqL4_3UUiNJ"
+    },
+    {
+      "id": 3,
+      "title": "Inception",
+      "year": 2010,
+      "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "runtime": "148 min",
+      "genre": "Action, Adventure, Sci-Fi",
+      "studio": "Warner Bros.",
+      "rating": 8.8,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMnFzleYH2PxfTzz084F3cHelZC9FeJ9Ir4vrlrKjZANPCiMJ"
+    },
+    {
+      "id": 4,
+      "title": "The Dark Knight",
+      "year": 2008,
+      "synopsis": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+      "runtime": "152 min",
+      "genre": "Action, Crime, Drama",
+      "studio": "Warner Bros.",
+      "rating": 9.0,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOH1Z3WEv-NS_ahc7NSQRz1LTh813Z6sMmI_E7d1_FYpQd0MxY"
+    },
+    {
+      "id": 5,
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "synopsis": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "runtime": "154 min",
+      "genre": "Crime, Drama",
+      "studio": "Miramax Films",
+      "rating": 8.9,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlNRzwKlBbE6QGNyvO0rGoruofKdYgGK9MeozNwRdWmnDMf8xI"
+    },
+    {
+      "id": 6,
+      "title": "Fight Club",
+      "year": 1999,
+      "synopsis": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+      "runtime": "139 min",
+      "genre": "Drama",
+      "studio": "Fox 2000 Pictures",
+      "rating": 8.8,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSor8IGjk4o_CD4Tc6I4JQL3AFKtSpaMr_YvsbWmZ4kfNqiORHO"
+    },
+    {
+      "id": 7,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "synopsis": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+      "runtime": "178 min",
+      "genre": "Action, Adventure, Drama",
+      "studio": "New Line Cinema",
+      "rating": 8.8,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ-hQp-geKRR9PGKRbf-QjY_HA6ha5ZnpQ8dVNbiSMqZi5Z6rue"
+    },
+    {
+      "id": 8,
+      "title": "Forrest Gump",
+      "year": 1994,
+      "synopsis": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "runtime": "142 min",
+      "genre": "Drama, Romance",
+      "studio": "Paramount Pictures",
+      "rating": 8.8,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQvJZAr8HsQLqTb0cnw-2SaBI3-8GbmHLz778B-N7PhQZAvAcAU"
+    },
+    {
+      "id": 9,
+      "title": "The Matrix",
+      "year": 1999,
+      "synopsis": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "runtime": "136 min",
+      "genre": "Action, Sci-Fi",
+      "studio": "Warner Bros.",
+      "rating": 8.7,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3MOU9bwdtLj5bMlHioRxzkr2HEyll3bm1qab6D71WulrKJrtY"
+    },
+    {
+      "id": 10,
+      "title": "Goodfellas",
+      "year": 1990,
+      "synopsis": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+      "runtime": "146 min",
+      "genre": "Biography, Crime, Drama",
+      "studio": "Warner Bros.",
+      "rating": 8.7,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgbD0iURYSqhv2P0SRr9WqR5RUSoVbj--7LSThBVHUC6kicCKl"
+    },
+    {
+      "id": 11,
+      "title": "The Lord of the Rings: The Two Towers",
+      "year": 2002,
+      "synopsis": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+      "runtime": "179 min",
+      "genre": "Action, Adventure, Drama",
+      "studio": "New Line Cinema",
+      "rating": 8.7,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR6nJbgIc4VDmwLzaMo8CLOYiPkpgd5Bdm8EpL9hna4XZggrlit"
+    },
+    {
+      "id": 12,
+      "title": "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "synopsis": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+      "runtime": "201 min",
+      "genre": "Action, Adventure, Drama",
+      "studio": "New Line Cinema",
+      "rating": 8.9,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRB0R_wp7Zr0SWNnDXkJYU-8ZxZYSOFQvnVkT4hdAGA1ZhjUssN"
+    },
+    {
+      "id": 13,
+      "title": "The Godfather",
+      "year": 1972,
+      "synopsis": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "runtime": "175 min",
+      "genre": "Crime, Drama",
+      "studio": "Paramount Pictures",
+      "rating": 9.2,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ6EAZYpFPv-j-msWE7uFUueby2qiH_lz67ryBOJ41kg4nKHJ6y"
+    },
+    {
+      "id": 14,
+      "title": "The Godfather: Part II",
+      "year": 1974,
+      "synopsis": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+      "runtime": "202 min",
+      "genre": "Crime, Drama",
+      "studio": "Paramount Pictures",
+      "rating": 9.0,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTyk_H2WxvMp5bq4tIgaABNVfl9JVOSVE0Y6TcchuZpLtNMmFF_"
+    },
+    {
+      "id": 15,
+      "title": "The Dark Knight Rises",
+      "year": 2012,
+      "synopsis": "Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.",
+      "runtime": "164 min",
+      "genre": "Action, Adventure",
+      "studio": "Warner Bros.",
+      "rating": 8.4,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQYOGtS02_Vwjhsx3GZ3dxPMVCBLy3aw4jnA58SsebsHi_32f"
+    },
+    {
+      "id": 16,
+      "title": "The Prestige",
+      "year": 2006,
+      "synopsis": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+      "runtime": "130 min",
+      "genre": "Drama, Mystery, Sci-Fi",
+      "studio": "Warner Bros.",
+      "rating": 8.5,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRJH8xMbcPS3B6WoHjsjwghwn4seBH0VPxxKEBtUEBj8QS4S8x"
+    },
+    {
+      "id": 17,
+      "title": "Interstellar",
+      "year": 2014,
+      "synopsis": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "runtime": "169 min",
+      "genre": "Adventure, Drama, Sci-Fi",
+      "studio": "Paramount Pictures",
+      "rating": 8.6,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUw076GR7JpnfExoBLTMpiE9otUzk518SylUdC1roF6Ah63NS9"
+    },
+    {
+      "id": 18,
+      "title": "The Lion King",
+      "year": 1994,
+      "synopsis": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+      "runtime": "88 min",
+      "genre": "Animation, Adventure, Drama",
+      "studio": "Walt Disney Pictures",
+      "rating": 8.5,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRpGOeTdpPET8OvEtjBBg03Wze_EZKu61WNaK4mxfoVcPZmZEN6"
+    },
+    {
+      "id": 19,
+      "title": "Gladiator",
+      "year": 2000,
+      "synopsis": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+      "runtime": "155 min",
+      "genre": "Action, Adventure, Drama",
+      "studio": "DreamWorks Pictures",
+      "rating": 8.5,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQo_O8X1L56DAr8hFZz-B8ku7vvcvbrBh5plxWxa_Y1uIWA9Ohr"
+    },
+    {
+      "id": 20,
+      "title": "The Departed",
+      "year": 2006,
+      "synopsis": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+      "runtime": "151 min",
+      "genre": "Crime, Drama, Thriller",
+      "studio": "Warner Bros.",
+      "rating": 8.5,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSU0SP40gBSnIxxWMpN4-OYUXDRKsOFZX6L5dNv0srZlwKiAlvy"
+    },
+    {
+      "id": 21,
+      "title": "Saving Private Ryan",
+      "year": 1998,
+      "synopsis": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+      "runtime": "169 min",
+      "genre": "Drama, War",
+      "studio": "DreamWorks Pictures",
+      "rating": 8.6,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQ89HMuHlCxJwu68S3e0JQLtY3o_uc2woCAF8Vbq3Y3JzWJMto"
+    },
+    {
+      "id": 22,
+      "title": "The Green Mile",
+      "year": 1999,
+      "synopsis": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "runtime": "189 min",
+      "genre": "Crime, Drama, Fantasy",
+      "studio": "Warner Bros.",
+      "rating": 8.6,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSgZqWs8at0E7djB-Rgntwg_fzuZwWl96llZQl6QkHIDHggZSsf"
+    },
+    {
+      "id": 23,
+      "title": "The Intouchables",
+      "year": 2011,
+      "synopsis": "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
+      "runtime": "112 min",
+      "genre": "Biography, Comedy, Drama",
+      "studio": "Quad Productions",
+      "rating": 8.5,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTTGCKq7GcLEuE3dGs--1rBVJm9dmHeZEtWTE_RzuuwqtkDkobG"
+    },
+    {
+      "id": 24,
+      "title": "Whiplash",
+      "year": 2014,
+      "synopsis": "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+      "runtime": "107 min",
+      "genre": "Drama, Music",
+      "studio": "Bold Films",
+      "rating": 8.5,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS_IwW5-_mWA1PXiPG4qEhLC6Q3vntQd7Bzgs_YE7HHFifItn2T"
+    },
+    {
+      "id": 25,
+      "title": "The Prestige",
+      "year": 2006,
+      "synopsis": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+      "runtime": "130 min",
+      "genre": "Drama, Mystery, Sci-Fi",
+      "studio": "Warner Bros.",
+      "rating": 8.5,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRJH8xMbcPS3B6WoHjsjwghwn4seBH0VPxxKEBtUEBj8QS4S8x"
+    },
+    {
+      "id": 26,
+      "title": "One Flew Over the Cuckoo's Nest",
+      "year": 1975,
+      "synopsis": "A criminal pleads insanity and is admitted to a mental institution, where he rebels against the oppressive nurse and rallies up the scared patients.",
+      "runtime": "133 min",
+      "genre": "Drama",
+      "studio": "United Artists",
+      "rating": 8.7,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRlld0BPab7fKujwq0diZa0S5i6qgvSZri7NJPkQs7XSkIZIl7c"
+    },
+    {
+      "id": 27,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "synopsis": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+      "runtime": "178 min",
+      "genre": "Action, Adventure, Drama",
+      "studio": "New Line Cinema",
+      "rating": 8.8,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ-hQp-geKRR9PGKRbf-QjY_HA6ha5ZnpQ8dVNbiSMqZi5Z6rue"
+    },
+    {
+      "id": 28,
+      "title": "Fight Club",
+      "year": 1999,
+      "synopsis": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+      "runtime": "139 min",
+      "genre": "Drama",
+      "studio": "20th Century Fox",
+      "rating": 8.8,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSor8IGjk4o_CD4Tc6I4JQL3AFKtSpaMr_YvsbWmZ4kfNqiORHO"
+    },
+    {
+      "id": 29,
+      "title": "The Empire Strikes Back",
+      "year": 1980,
+      "synopsis": "After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued by Darth Vader and a bounty hunter named Boba Fett all over the galaxy.",
+      "runtime": "124 min",
+      "genre": "Action, Adventure, Fantasy",
+      "studio": "Lucasfilm Ltd.",
+      "rating": 8.7,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS-66DuPU8AgfvKv30sUpSVqTyRViBHTgjVBsftkL2gloK0lQ-p"
+    }
+  ]
+}
