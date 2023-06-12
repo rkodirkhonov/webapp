@@ -80,7 +80,7 @@ const Home = () => {
 
       <div className="main-div">
         <input
-        style={{paddingTop: "4rem",}}
+        style={{paddingTop: "1rem",}}
           type="text"
           placeholder="Search"
           value={searchTerm}
