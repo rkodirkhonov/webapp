@@ -8,7 +8,7 @@
       "runtime": "143 min",
       "genre": "Action, Adventure, Sci-Fi",
       "studio": "Marvel Studios",
-      "rating": 8.0,
+      "rating": 8,
       "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTp0qlAoWcOOswIkL_qpjYzJqCCDmWXiBzCXiqbE43Obo8c0Z-s"
     },
     {
@@ -41,7 +41,7 @@
       "runtime": "152 min",
       "genre": "Action, Crime, Drama",
       "studio": "Warner Bros.",
-      "rating": 9.0,
+      "rating": 9,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOH1Z3WEv-NS_ahc7NSQRz1LTh813Z6sMmI_E7d1_FYpQd0MxY"
     },
     {
@@ -151,7 +151,7 @@
       "runtime": "202 min",
       "genre": "Crime, Drama",
       "studio": "Paramount Pictures",
-      "rating": 9.0,
+      "rating": 9,
       "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTyk_H2WxvMp5bq4tIgaABNVfl9JVOSVE0Y6TcchuZpLtNMmFF_"
     },
     {
@@ -318,6 +318,17 @@
       "studio": "Lucasfilm Ltd.",
       "rating": 8.7,
       "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS-66DuPU8AgfvKv30sUpSVqTyRViBHTgjVBsftkL2gloK0lQ-p"
+    },
+    {
+      "id": 30,
+      "title": "Friends",
+      "year": 1994,
+      "synopsis": "Friends is a 90's Comedy TV show, based in Manhattan, about 6 friends who go through just about every life experience imaginable together; love, marriage, divorce, children, heartbreaks, fights, new jobs and job losses and all sorts of drama.",
+      "runtime": "167",
+      "genre": "drama, thriller",
+      "studio": "Movie Studio",
+      "rating": 7.2,
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMpWgFcYiV0MThcMMAVihr_5Zx2twoZ2Q_kVZOsVZ9nH1hmJZj"
     }
   ]
 }
