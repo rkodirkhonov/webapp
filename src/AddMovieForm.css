@@ -1,0 +1,62 @@
+.add-movie-form {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.add-movie-form label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.add-movie-form input,
+.add-movie-form textarea {
+  width: calc(100% - 90px);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+
+.add-movie-form button {
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 7px 17px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  margin: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.add-movie-form button:hover {
+  color: white;
+  background-color: rgba(21, 194, 233, 0.492);
+}
+
+@media (max-width: 768px) {
+  .add-movie-form {
+    max-width: 100%;
+  }
+  
+  .add-movie-form label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-right: 0;
+  }
+  
+  .add-movie-form input,
+  .add-movie-form textarea {
+    width: 100%;
+  }
+}
