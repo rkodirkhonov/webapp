@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AddMovieForm.css";
 
 const AddMovieForm = ({ addMovie, movies }) => {
@@ -19,7 +19,9 @@ const AddMovieForm = ({ addMovie, movies }) => {
   };
   
   // Usage
-  setLastId(getLastDataId());
+  useEffect(() => {
+    setLastId(getLastDataId());
+  }, []);
   
   const handleFormSubmit = (event) => {
     event.preventDefault();
