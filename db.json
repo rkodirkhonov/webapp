@@ -329,6 +329,17 @@
       "studio": "Movie Studio",
       "rating": 7.2,
       "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMpWgFcYiV0MThcMMAVihr_5Zx2twoZ2Q_kVZOsVZ9nH1hmJZj"
+    },
+    {
+      "id": 31,
+      "title": "Shum Bola",
+      "year": 1976,
+      "synopsis": "\"Shum bola\" is a short story written by the Uzbek writer and poet Gafur Ghulam. The author wrote the work in 1936. The short story has been published several times. The story describes the artist's childhood and life in Tashkent at the beginning of the 20th century. The short story is a sharp comic work based on real events and people's fate.",
+      "runtime": "129",
+      "genre": "Real-story Based",
+      "studio": "Milliy Teleradio Channel",
+      "rating": 9.8,
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjNkNjZhNmEtYzBiYi00Mzc4LWIzMzQtYzE5OWNjNTIxNDkyXkEyXkFqcGdeQXVyMTk0NDAyMTE@._V1_.jpg"
     }
   ]
 }
