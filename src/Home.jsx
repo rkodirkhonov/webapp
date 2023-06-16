@@ -6,6 +6,101 @@ import AddMovieForm from "./AddMovieForm";
 // // run json-server first
 // // npx json-server --watch db.json --port 3001
 // // and npm start
+
+// improved version 
+const Home = () => {
+  const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredMovies, setFilteredMovies] = useState([]);
+
+  const handleSearch = (searchTerm) => {
+    setSearchTerm(searchTerm);
+    filterMovies(searchTerm);
+  };
+
+  useEffect(() => {
+    fetchData().then((jsonData) => {
+      setMovies(jsonData);
+      setFilteredMovies(jsonData); // Set initial filtered movies to all movies
+    });
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/data", {
+        method: "GET",
+      });
+      if (response.ok) {
+        const jsonData = await response.json();
+        return jsonData;
+      } else {
+        throw new Error("Failed to fetch data.");
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw new Error("Failed to fetch data. Please try again.");
+    }
+  };
+// improved version
+  const filterMovies = (searchTerm) => {
+    const keywords = searchTerm.toLowerCase().split(" ");
+    const filteredMovies = movies.filter((movie) => {
+      const movieData = `${movie.title.toLowerCase()} ${movie.synopsis.toLowerCase()} ${movie.genre.toLowerCase()}`;
+      return keywords.every((keyword) => movieData.includes(keyword));
+    });
+  
+    setFilteredMovies(filteredMovies);
+  };
+
+  const addMovie = async (newMovie) => {
+    try {
+      const response = await fetch("http://localhost:3001/data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newMovie),
+      });
+      if (response.ok) {
+        const movie = await response.json();
+        setMovies([...movies, movie]);
+        filterMovies(searchTerm); // Reapply filtering after adding a new movie
+      } else {
+        throw new Error("Failed to add movie.");
+      }
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
+
+  return (
+    <>
+      <Navbar />
+
+      <div className="main-div">
+        <input
+          style={{ paddingTop: "1rem" }}
+          type="text"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={(event) => handleSearch(event.target.value)}
+        />
+        <div className="movie-card-container">
+          {filteredMovies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
+        <AddMovieForm addMovie={addMovie} movies={movies} />
+      </div>
+    </>
+  );
+};
+
+export default Home;
+
+
+
+
 // my version
 // const Home = () => {
 //   const [movies, setMovies] = useState([]);
@@ -107,52 +202,7 @@ import AddMovieForm from "./AddMovieForm";
 
 // export default Home;
 
-// improved chatGPT used version 
-const Home = () => {
-  const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredMovies, setFilteredMovies] = useState([]);
-
-  const handleSearch = (searchTerm) => {
-    setSearchTerm(searchTerm);
-    filterMovies(searchTerm);
-  };
-
-  useEffect(() => {
-    fetchData().then((jsonData) => {
-      setMovies(jsonData);
-      setFilteredMovies(jsonData); // Set initial filtered movies to all movies
-    });
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch("http://localhost:3001/data", {
-        method: "GET",
-      });
-      if (response.ok) {
-        const jsonData = await response.json();
-        return jsonData;
-      } else {
-        throw new Error("Failed to fetch data.");
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      throw new Error("Failed to fetch data. Please try again.");
-    }
-  };
-// chatGPT version just insane
-  const filterMovies = (searchTerm) => {
-    const keywords = searchTerm.toLowerCase().split(" ");
-    const filteredMovies = movies.filter((movie) => {
-      const movieData = `${movie.title.toLowerCase()} ${movie.synopsis.toLowerCase()} ${movie.genre.toLowerCase()}`;
-      return keywords.every((keyword) => movieData.includes(keyword));
-    });
-  
-    setFilteredMovies(filteredMovies);
-  };
-
-  // my version
+ // my version
   // const filterMovies = (searchTerm) => {
   //   const lowerCaseSearchTerm = searchTerm.toLowerCase();
   //   const filteredMovies = movies.filter(
@@ -164,49 +214,3 @@ const Home = () => {
   //   );
   //   setFilteredMovies(filteredMovies);
   // };
-
-  const addMovie = async (newMovie) => {
-    try {
-      const response = await fetch("http://localhost:3001/data", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newMovie),
-      });
-      if (response.ok) {
-        const movie = await response.json();
-        setMovies([...movies, movie]);
-        filterMovies(searchTerm); // Reapply filtering after adding a new movie
-      } else {
-        throw new Error("Failed to add movie.");
-      }
-    } catch (error) {
-      throw new Error(error.message);
-    }
-  };
-
-  return (
-    <>
-      <Navbar />
-
-      <div className="main-div">
-        <input
-          style={{ paddingTop: "1rem" }}
-          type="text"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={(event) => handleSearch(event.target.value)}
-        />
-        <div className="movie-card-container">
-          {filteredMovies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        </div>
-        <AddMovieForm addMovie={addMovie} movies={movies} />
-      </div>
-    </>
-  );
-};
-
-export default Home;
