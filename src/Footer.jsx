@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <p>&copy; {currentYear}. All rights reserved.</p>
+      <p>rkodirkhonov</p>
       {/* <p>by rusdev</p> */}
     </footer>
   );

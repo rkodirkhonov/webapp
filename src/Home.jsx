@@ -62,6 +62,7 @@ const Home = () => {
           ))}
         </div>
         <AddMovieForm addMovie={addMovie} movies={filteredMovies} />
+        <p className="tt">No database service is connected. So the new movie data you added will be disappeared after you refresh the page!</p>
       </div>
     </>
   );

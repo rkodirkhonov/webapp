@@ -49,7 +49,9 @@ const WelcomePage = () => {
     <>
       <div className="welcome-page">
         <h1>Web Application</h1>
-        <p>Explore the world of programming and technology</p>
+        <p>"The best way to learn programming is by doing it." - Grace Hopper</p>
+        <p>"Programming is like building a house. You need a solid foundation, good materials, and a plan." - Donald Knuth</p>
+        <p>"Programming is not about writing code. It's about solving problems." - Eric Lippert</p>
         <img src={mainImage} alt="Welcome" />
       </div>
       <div className="signUP">
@@ -76,6 +78,8 @@ const WelcomePage = () => {
         )}
         <button onClick={handleSignIn}>Sign In</button>
       </div>
+      <p className="tt">Your data will be stored in the browser's local storage. This means that it will be saved on your device and will not be sent to any third-party servers.</p>
+      <p className="tt">You can check your data at any time by opening the browser's console and typing localStorage.userData.</p>
     </>
   );
 };

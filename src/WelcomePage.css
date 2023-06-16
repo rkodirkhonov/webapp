@@ -84,3 +84,8 @@ button:hover {
 .invalid-input {
   border-bottom: 2px solid red;
 }
+
+.tt {
+  margin: 20px auto;
+  text-align: center;
+}
